@@ -23,6 +23,8 @@ function love.load ()
     photos.a8 = love.graphics.newImage('assets/a8.png')
     photos.a9 = love.graphics.newImage('assets/a9.png')
     photos.a10 = love.graphics.newImage('assets/a10.png')
+    photos.a11 = love.graphics.newImage('assets/a11.png')
+    photos.a12 = love.graphics.newImage('assets/a12.png')
     --sprites.p4 = love.graphics.newImage('assets/4.png')
 
     gameState=1
@@ -77,6 +79,7 @@ function love.update(dt)
             timer <= 0 then 
             gameState = 6
             timer = maxTime
+            
             print(gameState)
             
         end
@@ -95,7 +98,9 @@ function love.draw()
         love.graphics.printf("press enter to begin", 510, 540, love.graphics.getWidth())
     elseif
     gameState == 2 then
-        love.graphics.draw(sprites.p2) elseif
+        love.graphics.draw(sprites.p2) 
+        input = ""
+        elseif
     gameState == 3 then
         love.graphics.draw(sprites.p3)
         love.graphics.setFont(font)

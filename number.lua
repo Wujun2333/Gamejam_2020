@@ -26,8 +26,8 @@ function calculateLetter()
      
     photoNumber = #s + x
 
-    while photoNumber > 10 do
-        photoNumber = photoNumber - 10
+    while photoNumber > 12 do
+        photoNumber = photoNumber - 12
     end   
     print ("a"..photoNumber) 
 
@@ -62,6 +62,12 @@ function calculateLetter()
     end
     if photoNumber == 10 then 
     printPhoto(photos.a10)  
+    end
+    if photoNumber == 11 then 
+    printPhoto(photos.a11)  
+    end
+    if photoNumber == 12 then 
+    printPhoto(photos.a12)  
     end
 
 
