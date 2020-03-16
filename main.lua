@@ -17,6 +17,10 @@ function love.load ()
     photos.a4 = love.graphics.newImage('assets/a4.png')
     photos.a5 = love.graphics.newImage('assets/a5.png')
     photos.a6 = love.graphics.newImage('assets/a6.png')
+    photos.a7 = love.graphics.newImage('assets/a7.png')
+    photos.a8 = love.graphics.newImage('assets/a8.png')
+    photos.a9 = love.graphics.newImage('assets/a9.png')
+    photos.a10 = love.graphics.newImage('assets/a10.png')
     --sprites.p4 = love.graphics.newImage('assets/4.png')
 
     gameState=1
@@ -48,25 +52,6 @@ function love.textinput(t)
     end
 end
 
---[[function formatTime(t)
-	date = math.floor(math.mod(t/60/60,60)) .. ":" .. string.sub("0" .. math.floor(math.mod(t/60,60)),-2) .. ":" .. string.sub("0" .. math.floor(math.mod(t,60)),-2)
-end]]
-
-function printDate()
-    love.graphics.printf(input, 280, 450, love.graphics.getWidth())
-    love.graphics.print(Now.month.."/"..Now.day.. "/"..Now.year.."  "..Now.hour..":".. Now.min, 280, 465)
-    --[[print(Now.year)
-    print(Now.month)
-    print(Now.day)
-    print(Now.hour)
-    print(Now.min)]]
-end
-
-function printPhoto(p)
-    love.graphics.draw(sprites.p1) 
-    love.graphics.draw(p, 400, 300, nil, 0.6, 0.6, photos.a1:getWidth()/2, photos.a1:getHeight()/2)
-    printDate()
-end
 
 
 function love.update(dt)
