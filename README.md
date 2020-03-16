@@ -1,2 +1,5 @@
 # Gamejam_2020
-out of print game jam
+Out of print game jam
+
+Press "enter" to begin.
+See yourself in a parallel dimension.
