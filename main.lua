@@ -4,6 +4,9 @@ local utf8 = require("utf8")
 
 
 function love.load ()
+
+    
+
     sprites={}
     sprites.p1 = love.graphics.newImage('assets/1.png')
     sprites.p2 = love.graphics.newImage('assets/2.png')
@@ -79,11 +82,8 @@ function love.update(dt)
             timer <= 0 then 
             gameState = 6
             timer = maxTime
-            
             print(gameState)
-            
         end
-        
     end
 end
 
@@ -106,9 +106,9 @@ function love.draw()
         love.graphics.setFont(font)
         love.graphics.printf(text, 40, 50, love.graphics.getWidth())
         love.graphics.printf(input, 200, 50, love.graphics.getWidth()) elseif
-    gameState == 4 then 
+    gameState == 4 then
         animation:draw(sprites.flash, 0, 0) elseif
-    gameState == 5 then 
+    gameState == 5 then
         animation2:draw(sprites.print, 0, 0) elseif
     gameState == 6 then
         if  input == "wujun" then                 
@@ -117,8 +117,8 @@ function love.draw()
             printPhoto(photos.a4)
             elseif input == "nono kros" or input == "nono" or input == "kros" or input == "Nono Kros" then
             printPhoto(sprites.nono)         
-            else 
-            calculateLetter()       
+            else
+            calculateLetter()
         end
     end
 
